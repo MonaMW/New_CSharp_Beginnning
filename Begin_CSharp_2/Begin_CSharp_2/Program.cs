@@ -10,16 +10,13 @@ namespace Begin_CSharp_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Bitte schreibe einen Text mit ';' ein");
+            Console.WriteLine("Bitte schreibe einen Text ein");
             string entry = Console.ReadLine();
 
-            string[] split_entry = entry.Split(';');
-            Console.WriteLine("Vorher:" + entry);
-
-            for(int i = 0; i < split_entry.Length; i++)
-            {
-                Console.WriteLine("Split:" + split_entry[i]);
-            }
+            if (entry.Contains("abc"))
+                Console.WriteLine("true");
+            else
+                Console.WriteLine("false");
             
             Console.ReadLine();
         }
