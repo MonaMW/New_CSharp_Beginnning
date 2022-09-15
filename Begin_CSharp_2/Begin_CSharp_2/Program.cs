@@ -11,19 +11,23 @@ namespace Begin_CSharp_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Wie viele Einträge möchtest du in deinem Array?");
+            Random r = new Random();
+            int random_zahl = r.Next(0, 100);
+            int entry = 0;
 
-            for(int i = 0; i < 100; i++)
+            do
             {
-                if (i % 3 == 0 && i % 5 == 0)
-                    Console.WriteLine("FizzBuzz");
-                else if (i % 3 == 0)
-                    Console.WriteLine("Fizz");
-                else if (i % 5 == 0)
-                    Console.WriteLine("Buzz");
+                entry = Convert.ToInt32(Console.ReadLine());
+                if (random_zahl > entry)
+                    Console.WriteLine("Eingegebene Zahl ist kleiner");
+                else if (random_zahl < entry)
+                    Console.WriteLine("Eingegebene Zahl ist größer");
                 else
-                    Console.WriteLine(i);
+                    Console.WriteLine("Eingegebene Zahl ist richtig");
             }
+            while (random_zahl != entry);
+
+
             Console.ReadLine();
         }
     }
