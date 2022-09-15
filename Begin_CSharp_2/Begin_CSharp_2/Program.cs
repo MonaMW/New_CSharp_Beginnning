@@ -12,28 +12,18 @@ namespace Begin_CSharp_2
         static void Main(string[] args)
         {
             Console.WriteLine("Wie viele Einträge möchtest du in deinem Array?");
-            int entries_count = Convert.ToInt32(Console.ReadLine());
-            int[] entry_array = new int[entries_count];
-            
-            for(int i = 0; i < entries_count; i++)
+
+            for(int i = 0; i < 100; i++)
             {
-                Console.WriteLine("Welche Zahl soll eingetragen werden?");
-                entry_array[i] = Convert.ToInt32(Console.ReadLine());              
+                if (i % 3 == 0 && i % 5 == 0)
+                    Console.WriteLine("FizzBuzz");
+                else if (i % 3 == 0)
+                    Console.WriteLine("Fizz");
+                else if (i % 5 == 0)
+                    Console.WriteLine("Buzz");
+                else
+                    Console.WriteLine(i);
             }
-            
-            for(int i = 0; i < entry_array.Count(); i++)
-            {
-                Console.WriteLine(entry_array[i]);
-            }
-
-            int average = entry_array.Sum() / entries_count;
-            int entry_max = entry_array.Max();
-            int entry_min = entry_array.Min();
-
-            Console.WriteLine("Max: " + entry_max);
-            Console.WriteLine("Min: " + entry_min);
-            Console.WriteLine("Durchschnitt: " + average);
-
             Console.ReadLine();
         }
     }
