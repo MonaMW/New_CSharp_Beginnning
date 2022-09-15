@@ -10,12 +10,13 @@ namespace Begin_CSharp_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Bitte schreibe einen Text mit Leerzeichen am Anfang und Ende eingeben");
+            Console.WriteLine("Bitte schreibe einen Text mit mindestens 21 Zeichen");
             string entry = Console.ReadLine();
-            string trimmed_entry = entry.Trim();
+            int length = entry.Length + 20;
+            string padded_entry = entry.PadLeft(length, 'y');
 
             Console.WriteLine("Vorher:" + entry);
-            Console.WriteLine("Nachher:" + trimmed_entry);
+            Console.WriteLine("Nachher:" + padded_entry);
 
             Console.ReadLine();
         }
