@@ -12,7 +12,7 @@ namespace Begin_CSharp_2
         {
             Console.WriteLine("Bitte schreibe einen Text mit mindestens 21 Zeichen");
             string entry = Console.ReadLine();
-            int length = entry.Length + 20;
+            int length = entry.Length + 30;
             string padded_entry = entry.PadLeft(length, 'y');
 
             Console.WriteLine("Vorher:" + entry);
