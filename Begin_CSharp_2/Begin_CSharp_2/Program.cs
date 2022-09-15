@@ -10,12 +10,15 @@ namespace Begin_CSharp_2
     {
         static void Main(string[] args)
         {
-            int first_number = 1;
-            int second_number = 2;
+            Console.WriteLine("Bitte gib eine Zahl ein");
+            int first_number = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Bitte gib eine andere Zahl ein");            
+            int second_number = Convert.ToInt32(Console.ReadLine());
 
             int sum = first_number + second_number;
 
-            Console.WriteLine(sum);
+            Console.WriteLine("Summe: " + sum);
             Console.ReadLine();
         }
     }
