@@ -13,12 +13,10 @@ namespace Begin_CSharp_2
         {
             Console.WriteLine("Bitte gebe eine Zahl ein");
             int entry = Convert.ToInt32(Console.ReadLine());
-            int j = 0;
 
-            for(int i = 0; i < entry; i++)
+            for(int i = entry; i >= 0; i--)
             {
-                j = i + j;
-                Console.WriteLine(j);
+                Console.WriteLine(i);
             }
             
             Console.ReadLine();
