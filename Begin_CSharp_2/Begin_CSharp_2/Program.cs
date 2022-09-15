@@ -11,14 +11,31 @@ namespace Begin_CSharp_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Bitte gebe eine Zahl ein");
-            int entry = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Bitte gebe einen Buchstaben ein");
+            string entry = Console.ReadLine();
 
-            for(int i = entry; i >= 0; i--)
+            List<string> list = new List<string>();
+            list.Add("Marie");
+            list.Add("Mona");
+            list.Add("Marcello");
+            list.Add("Lukas");
+            list.Add("Philipp");
+            list.Add("Robert");
+            list.Add("Erwin");
+            list.Add("Jonas");
+            list.Add("Robin");
+            list.Add("Leon");
+            list.Add("Andreas");
+            list.Add("Hannes");
+            list.Add("Jan");
+
+            for(int i = 0; i < list.Count; i++)
             {
-                Console.WriteLine(i);
+                if (list[i].Contains(entry))
+                    Console.WriteLine(list[i]);
             }
-            
+
+
             Console.ReadLine();
         }
     }
