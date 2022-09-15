@@ -13,10 +13,11 @@ namespace Begin_CSharp_2
             Console.WriteLine("Bitte schreibe einen Text ein");
             string entry = Console.ReadLine();
 
-            if (entry.Contains("abc"))
-                Console.WriteLine("true");
-            else
-                Console.WriteLine("false");
+            string to_upper_case = entry.ToUpper();
+            string to_lower_case = entry.ToLower();
+
+            Console.WriteLine("Upper Cases: " + to_upper_case);
+            Console.WriteLine("Lower Cases: " + to_lower_case);
             
             Console.ReadLine();
         }
