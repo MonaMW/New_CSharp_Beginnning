@@ -10,15 +10,13 @@ namespace Begin_CSharp_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Bitte gib eine Kommazahl ein");
-            double first_number = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Bitte schreibe einen Text mit Leerzeichen am Anfang und Ende eingeben");
+            string entry = Console.ReadLine();
+            string trimmed_entry = entry.Trim();
 
-            Console.WriteLine("Bitte gib eine andere Kommazahl ein");
-            double second_number = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Vorher:" + entry);
+            Console.WriteLine("Nachher:" + trimmed_entry);
 
-            double sum = first_number + second_number;
-
-            Console.WriteLine(sum);
             Console.ReadLine();
         }
     }
