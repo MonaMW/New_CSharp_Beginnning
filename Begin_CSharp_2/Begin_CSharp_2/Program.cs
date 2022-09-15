@@ -11,30 +11,21 @@ namespace Begin_CSharp_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Bitte gebe einen Buchstaben ein");
-            string entry = Console.ReadLine();
+            Console.WriteLine("Wie viele Einträge möchtest du in deinem Array?");
+            int entries_count = Convert.ToInt32(Console.ReadLine());
 
-            List<string> list = new List<string>();
-            list.Add("Marie");
-            list.Add("Mona");
-            list.Add("Marcello");
-            list.Add("Lukas");
-            list.Add("Philipp");
-            list.Add("Robert");
-            list.Add("Erwin");
-            list.Add("Jonas");
-            list.Add("Robin");
-            list.Add("Leon");
-            list.Add("Andreas");
-            list.Add("Hannes");
-            list.Add("Jan");
+            int[] entry_array = new int[entries_count];
 
-            for(int i = 0; i < list.Count; i++)
+            for(int i = 0; i < entries_count; i++)
             {
-                if (list[i].Contains(entry))
-                    Console.WriteLine(list[i]);
+                Console.WriteLine("Welche Zahl soll eingetragen werden?");
+                entry_array[i] = Convert.ToInt32(Console.ReadLine());              
             }
-
+            
+            for(int i = 0; i < entry_array.Count(); i++)
+            {
+                Console.WriteLine(entry_array[i]);
+            }
 
             Console.ReadLine();
         }
