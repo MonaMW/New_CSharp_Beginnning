@@ -13,10 +13,10 @@ namespace Begin_CSharp_2
             Console.WriteLine("Bitte gib einen Text ein");
             string entry = Console.ReadLine();
 
-            string replace_entry = entry.Replace("U", "u").Replace("G", "g");
+            //int count = entry.Length;
+            int count = entry.Count();
 
-            Console.WriteLine("Vorher: " + entry);
-            Console.WriteLine("Nachher: " + replace_entry);
+            Console.WriteLine("Die Länge deines Textes ist: " + count);
             Console.ReadLine();
         }
     }
