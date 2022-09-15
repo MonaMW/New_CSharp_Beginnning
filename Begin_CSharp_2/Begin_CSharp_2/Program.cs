@@ -10,14 +10,17 @@ namespace Begin_CSharp_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Bitte schreibe einen Text mit mindestens 21 Zeichen");
+            Console.WriteLine("Bitte schreibe einen Text mit ';' ein");
             string entry = Console.ReadLine();
-            int length = entry.Length + 30;
-            string padded_entry = entry.PadLeft(length, 'y');
 
+            string[] split_entry = entry.Split(';');
             Console.WriteLine("Vorher:" + entry);
-            Console.WriteLine("Nachher:" + padded_entry);
 
+            for(int i = 0; i < split_entry.Length; i++)
+            {
+                Console.WriteLine("Split:" + split_entry[i]);
+            }
+            
             Console.ReadLine();
         }
     }
