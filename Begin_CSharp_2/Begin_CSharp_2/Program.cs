@@ -11,13 +11,20 @@ namespace Begin_CSharp_2
     {
         static void Main(string[] args)
         {
-            List<string> AoT_names = new List<string>();
-            AoT_names.Add("Levi");
-            AoT_names.Add("Erwin");
-            AoT_names.Add("Eren");
-            AoT_names.Add("Armin");
-            AoT_names.Add("Mikasa");
-            AoT_names.Add(Console.ReadLine());
+            List<string> names = new List<string>();
+            int entries = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+            
+            for(int i = 0; i < entries; i++)
+            {
+                names.Add(Console.ReadLine());
+                Console.Clear();
+            }
+
+            for(int i = 0; i < names.Count; i++)
+            {
+                Console.WriteLine(names[i]);
+            }
 
             Console.ReadLine();
         }
