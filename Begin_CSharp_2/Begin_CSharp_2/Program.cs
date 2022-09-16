@@ -15,6 +15,10 @@ namespace Begin_CSharp_2
             int random_zahl = r.Next(0, 100);
             int entry = 0;
 
+            //man könnte auch eine bool Variable intitalisieren, auf false setzen
+            //Variable wird true, wenn die eingegebene Zahl richtig ist
+            //while(!BoolscheVariable)
+
             do
             {
                 entry = Convert.ToInt32(Console.ReadLine());
