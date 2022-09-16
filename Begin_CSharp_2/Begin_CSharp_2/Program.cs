@@ -11,26 +11,24 @@ namespace Begin_CSharp_2
     {
         static void Main(string[] args)
         {
-            Random r = new Random();
-            int random_zahl = r.Next(0, 100);
-            int entry = 0;
+            //Array, das platz für fünf Werte hat
+            int[] zahlen = new int[5];
+            int[] zahlen2 = new int[] { 26, 8, 12, 3, 6 };
 
-            //man könnte auch eine bool Variable intitalisieren, auf false setzen
-            //Variable wird true, wenn die eingegebene Zahl richtig ist
-            //while(!BoolscheVariable)
-
-            do
+            for(int i = 0; i < zahlen.Length; i++)
             {
-                entry = Convert.ToInt32(Console.ReadLine());
-                if (random_zahl > entry)
-                    Console.WriteLine("Eingegebene Zahl ist kleiner");
-                else if (random_zahl < entry)
-                    Console.WriteLine("Eingegebene Zahl ist größer");
-                else
-                    Console.WriteLine("Eingegebene Zahl ist richtig");
+                Console.WriteLine("Gebe mr eine Zahl für das Array!");
+                zahlen[i] = Convert.ToInt32(Console.ReadLine());
             }
-            while (random_zahl != entry);
 
+            Console.Write("[");
+            for(int i = 0; i < zahlen.Length; i++)
+            {
+                Console.Write($" {zahlen[i]} | ");
+            }
+            Console.Write(" ]");
+            //Console.WriteLine - schreibt immer in eine neue Zeile
+            //Console.Write - schreibt alles in eine Zeile
 
             Console.ReadLine();
         }
