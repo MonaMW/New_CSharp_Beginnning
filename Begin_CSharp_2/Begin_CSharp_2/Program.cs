@@ -26,23 +26,22 @@ namespace Begin_CSharp_2
             {
                 case "+":
                     ergebnis = zahl1 + zahl2;
-                    Console.WriteLine("Die Zahl ist: " + ergebnis);
                     break;
                 case "-":
                     ergebnis = zahl1 + zahl2;
-                    Console.WriteLine("Die Zahl ist: " + ergebnis);
                     break;
                 case "*":
                     ergebnis = zahl1 * zahl2;
-                    Console.WriteLine("Die Zahl ist: " + ergebnis);
                     break;
                 case "/":
                     ergebnis = zahl1 / zahl2;
-                    Console.WriteLine("Die Zahl ist: " + ergebnis);
                     break;
                 default:
                     break;
             }
+
+
+            Console.WriteLine("Die Zahl ist: " + ergebnis);
 
             Console.ReadLine();
         }
