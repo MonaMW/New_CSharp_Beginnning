@@ -11,23 +11,46 @@ namespace Begin_CSharp_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Wir holen uns jetzt eine Zahl aus Number()");
-            List<string> names = Number();
-            foreach(var name in names)
-            {
-                Console.WriteLine(name);
-            }
-            
+            Console.WriteLine("Gib eine Zahl ein");
+            int zahl1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Gib eine weitere Zahl ein");
+            int zahl2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Gib einen Operator ein");
+            string math_operator = Console.ReadLine();
+
+            double addResult = Add(zahl1, zahl2);
+            double minusResult = Minus(zahl1, zahl2);
+            double multiResult = Multi(zahl1, zahl2);
+            double divideResult = Divide(zahl1, zahl2);
+
+            Console.WriteLine(addResult);
             Console.ReadLine();
         }
 
-        static List<string> Number()
+        static int Add(int z1, int z2)
         {
-            List<string> name = new List<string>();
-            name.Add("ABC");
+            int summe = z1 + z2;
+            return summe;
+        }
 
-            //Rückgabevariable
-            return name;
+        static int Minus(int z1, int z2)
+        {
+            int summe = z1 - z2;
+            return summe;
+        }
+
+        static int Multi(int z1, int z2)
+        {
+            int summe = z1 * z2;
+            return summe;
+        }
+
+        static double Divide(int z1, int z2)
+        {
+            double summe = z1 / z2;
+            return summe;
         }
     }
 }
