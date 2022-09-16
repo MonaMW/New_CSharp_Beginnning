@@ -11,63 +11,69 @@ namespace Begin_CSharp_2
     {
         static void Main(string[] args)
         {
-            //Aufgabe 2
-            List<int> lst_numbers = new List<int>() { 5,3,7 };
+            int budget = 10000;
+            //int gesamtverlust = 0;
+            Console.WriteLine("Budget ist " + budget);
 
-            //Aufgabe 3
-            while (true)
-            {
-                Console.WriteLine("Gib mir eine Zahl");
-                string entry2 = Console.ReadLine();
-                if (entry2 == String.Empty)
-                    break;
+            Console.WriteLine("Setze deinen Einsatz");
+            int einsatz = Convert.ToInt32(Console.ReadLine());
 
-                int entry = Convert.ToInt32(entry2);
-                lst_numbers.Add(entry);
-            }
-
-            //Aufgabe 4
-            for (int i = 0; i < lst_numbers.Count(); i++)
-            {
-                Console.WriteLine(lst_numbers[i]);
-            }
-
-            //Aufgabe 5
-            //lst_numbers.RemoveAt(1);
-            lst_numbers.Insert(1, 99);
-
-            //Aufgabe 6
-            List<int> lst_range = new List<int>() { 91, 92, 93 };
-            lst_numbers.AddRange(lst_range);
-
-            //Aufgabe 7
-            lst_numbers.RemoveAt(0);
-
-            //Aufgabe 8
-            lst_numbers.Remove(99);
-
-            //Aufgabe 9
-            lst_numbers.RemoveAt(lst_numbers.Count - 1);
-
-            //Aufgabe 10
-            Console.WriteLine("Sorted list");
-            lst_numbers.Sort();
-            for(int i = 0; i < lst_numbers.Count(); i++)
-            {
-                Console.WriteLine(lst_numbers[i]);
-            }
-
-            Console.WriteLine("Reversed list");
-            lst_numbers.Reverse();
-            for(int i = 0; i < lst_numbers.Count(); i++)
-            {
-                Console.WriteLine(lst_numbers[i]);
-            }
-
-            //Aufgabe 11
-            lst_numbers.RemoveAll(x => x > 80);
+            bool gewonnen = true;
             
-            
+            Random k = new Random();
+            int random_zahl = k.Next(0, 36);
+
+            int count = 0;
+
+            do
+            {
+                if (budget >= 10000 && gewonnen)
+                {
+                    einsatz += 10;
+                    Console.WriteLine("Einsatz 10$");
+                    budget = budget - einsatz;
+                }
+                else if (budget >= 10000 && !gewonnen)
+                {
+                    einsatz += 20;
+                    Console.WriteLine("Einsatz 20$");
+                    budget = budget - einsatz;
+                }
+
+                //Gesamtverlust wird verdoppelt
+                if (budget < 10000)
+                {
+                    einsatz = (10000 - budget) * 2;
+                }
+
+                //Budget reicht nicht für geplanten Zug
+                if (einsatz > budget)
+                    einsatz = budget;
+
+                //wenn k gerade und größer 0
+                if (random_zahl > 0 && random_zahl % 2 == 0)
+                {
+                    gewonnen = true;
+                    budget += einsatz * 2;
+                    Console.WriteLine("Sie erhalten " + einsatz * 2);
+                }
+                //wenn k == 0
+                else if (random_zahl == 0)
+                {
+                    Console.WriteLine("Ihr Einsatz bleibt bestehen.");
+                }
+                //wenn k ungerade ist
+                else if (!(random_zahl % 2 == 0))
+                {
+                    budget = budget - einsatz;
+                    Console.WriteLine("Sie haben Ihren Einsatz verloren.");
+                    gewonnen = false;
+                }
+                count++;
+
+            } while (budget > 0);
+
+            Console.WriteLine("Anzahl Spiele: " + count);
             Console.ReadLine();
         }
     }
