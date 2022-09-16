@@ -11,46 +11,64 @@ namespace Begin_CSharp_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Gib eine Zahl ein");
-            int zahl1 = Convert.ToInt32(Console.ReadLine());
+            //Aufgabe 2
+            List<int> lst_numbers = new List<int>() { 5,3,7 };
 
-            Console.WriteLine("Gib eine weitere Zahl ein");
-            int zahl2 = Convert.ToInt32(Console.ReadLine());
+            //Aufgabe 3
+            while (true)
+            {
+                Console.WriteLine("Gib mir eine Zahl");
+                string entry2 = Console.ReadLine();
+                if (entry2 == String.Empty)
+                    break;
 
-            Console.WriteLine("Gib einen Operator ein");
-            string math_operator = Console.ReadLine();
+                int entry = Convert.ToInt32(entry2);
+                lst_numbers.Add(entry);
+            }
 
-            double addResult = Add(zahl1, zahl2);
-            double minusResult = Minus(zahl1, zahl2);
-            double multiResult = Multi(zahl1, zahl2);
-            double divideResult = Divide(zahl1, zahl2);
+            //Aufgabe 4
+            for (int i = 0; i < lst_numbers.Count(); i++)
+            {
+                Console.WriteLine(lst_numbers[i]);
+            }
 
-            Console.WriteLine(addResult);
+            //Aufgabe 5
+            //lst_numbers.RemoveAt(1);
+            lst_numbers.Insert(1, 99);
+
+            //Aufgabe 6
+            List<int> lst_range = new List<int>() { 91, 92, 93 };
+            lst_numbers.AddRange(lst_range);
+
+            //Aufgabe 7
+            lst_numbers.RemoveAt(0);
+
+            //Aufgabe 8
+            lst_numbers.Remove(99);
+
+            //Aufgabe 9
+            lst_numbers.RemoveAt(lst_numbers.Count - 1);
+
+            //Aufgabe 10
+            Console.WriteLine("Sorted list");
+            lst_numbers.Sort();
+            for(int i = 0; i < lst_numbers.Count(); i++)
+            {
+                Console.WriteLine(lst_numbers[i]);
+            }
+
+            Console.WriteLine("Reversed list");
+            lst_numbers.Reverse();
+            for(int i = 0; i < lst_numbers.Count(); i++)
+            {
+                Console.WriteLine(lst_numbers[i]);
+            }
+
+            //Aufgabe 11
+            lst_numbers.RemoveAll(x => x > 80);
+            
+            
             Console.ReadLine();
-        }
-
-        static int Add(int z1, int z2)
-        {
-            int summe = z1 + z2;
-            return summe;
-        }
-
-        static int Minus(int z1, int z2)
-        {
-            int summe = z1 - z2;
-            return summe;
-        }
-
-        static int Multi(int z1, int z2)
-        {
-            int summe = z1 * z2;
-            return summe;
-        }
-
-        static double Divide(int z1, int z2)
-        {
-            double summe = z1 / z2;
-            return summe;
         }
     }
 }
