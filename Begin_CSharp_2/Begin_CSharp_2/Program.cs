@@ -12,21 +12,19 @@ namespace Begin_CSharp_2
         static void Main(string[] args)
         {
             //Array, das platz für fünf Werte hat
-            int[] zahlen = new int[5];
-            int[] zahlen2 = new int[] { 26, 8, 12, 3, 6 };
+            string[] namen = new string[13];
+            string[] namen2 = new string[] { "Lukas", "Jonas", "Mona", "Marie", "Philipp", "Jan", "Erwin", "Leon", "Marcello", "Johannes", "Robin", "Andreas", "Robert" };
 
-            for(int i = 0; i < zahlen.Length; i++)
-            {
-                Console.WriteLine("Gebe mr eine Zahl für das Array!");
-                zahlen[i] = Convert.ToInt32(Console.ReadLine());
-            }
+            //for(int i = 0; i < namen.Length; i++)
+            //{
+            //    Console.WriteLine("Gebe mr einen Namen für das Array!");
+            //    namen[i] = Console.ReadLine();
+            //}
 
-            Console.Write("[");
-            for(int i = 0; i < zahlen.Length; i++)
+            for(int i = 0; i < namen.Length; i++)
             {
-                Console.Write($" {zahlen[i]} | ");
+                Console.WriteLine(namen[i]);
             }
-            Console.Write(" ]");
             //Console.WriteLine - schreibt immer in eine neue Zeile
             //Console.Write - schreibt alles in eine Zeile
 
