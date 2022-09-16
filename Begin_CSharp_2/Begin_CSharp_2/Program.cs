@@ -11,22 +11,23 @@ namespace Begin_CSharp_2
     {
         static void Main(string[] args)
         {
-            //Array, das platz für fünf Werte hat
-            string[] namen = new string[13];
-            string[] namen2 = new string[] { "Lukas", "Jonas", "Mona", "Marie", "Philipp", "Jan", "Erwin", "Leon", "Marcello", "Johannes", "Robin", "Andreas", "Robert" };
+            int zahl = Convert.ToInt32(Console.ReadLine());
 
-            //for(int i = 0; i < namen.Length; i++)
-            //{
-            //    Console.WriteLine("Gebe mr einen Namen für das Array!");
-            //    namen[i] = Console.ReadLine();
-            //}
-
-            for(int i = 0; i < namen.Length; i++)
+            switch (zahl)
             {
-                Console.WriteLine(namen[i]);
+                case 1:
+                    Console.WriteLine("Die Zahl ist 1");
+                    break;
+                case 2:
+                    Console.WriteLine("Die Zahl ist 2");
+                    break;
+                case 5:
+                    Console.WriteLine("Die Zahl ist 5");
+                    break;
+                default:
+                    Console.WriteLine("Kein Fall tritt ein");
+                    break;
             }
-            //Console.WriteLine - schreibt immer in eine neue Zeile
-            //Console.Write - schreibt alles in eine Zeile
 
             Console.ReadLine();
         }
