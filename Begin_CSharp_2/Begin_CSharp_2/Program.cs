@@ -11,21 +11,36 @@ namespace Begin_CSharp_2
     {
         static void Main(string[] args)
         {
-            int zahl = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Gib eine Zahl ein");
+            int zahl1 = Convert.ToInt32(Console.ReadLine());
 
-            switch (zahl)
+            Console.WriteLine("Gib einen Operator ein");
+            string math_operator = Console.ReadLine();
+
+            Console.WriteLine("Gib eine weiter Zahl ein");
+            int zahl2 = Convert.ToInt32(Console.ReadLine());
+
+            double ergebnis = 0;
+
+            switch (math_operator)
             {
-                case 1:
-                    Console.WriteLine("Die Zahl ist 1");
+                case "+":
+                    ergebnis = zahl1 + zahl2;
+                    Console.WriteLine("Die Zahl ist: " + ergebnis);
                     break;
-                case 2:
-                    Console.WriteLine("Die Zahl ist 2");
+                case "-":
+                    ergebnis = zahl1 + zahl2;
+                    Console.WriteLine("Die Zahl ist: " + ergebnis);
                     break;
-                case 5:
-                    Console.WriteLine("Die Zahl ist 5");
+                case "*":
+                    ergebnis = zahl1 * zahl2;
+                    Console.WriteLine("Die Zahl ist: " + ergebnis);
+                    break;
+                case "/":
+                    ergebnis = zahl1 / zahl2;
+                    Console.WriteLine("Die Zahl ist: " + ergebnis);
                     break;
                 default:
-                    Console.WriteLine("Kein Fall tritt ein");
                     break;
             }
 
