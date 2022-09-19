@@ -10,6 +10,7 @@ namespace Begin_CSharp_2
 {
     internal class House
     {
+        //Properties oder Eigeschaften
         public double Length { get; set; }
         public double Width { get; set; }
         public int Height { get; set; }
@@ -89,7 +90,8 @@ namespace Begin_CSharp_2
 
         public void PrintHouseInformation()
         {
-            Console.WriteLine($"Das Haus ist {Length} Meter lang und {Width} Meter breit. Es hat ein {RoofType}dach und {Etagen} Etagen. Das ist Haus ist {Color}.");
+            //$ = String Interpretation
+            Console.WriteLine($"Das Haus ist {Length} Meter lang und {Width} Meter breit. Es hat ein {RoofType}dach und {Etagen} Etagen. Das Haus ist {Color}.");
             Console.WriteLine($"Das Grundstück ist {PropertyQM} qm groß, die Wohnfläche beträgt {Wohnfläche} qm.");
         }
 
