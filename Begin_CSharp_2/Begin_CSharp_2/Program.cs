@@ -27,6 +27,8 @@ namespace Begin_CSharp_2
             {
                 house.CalculateProperties();
                 house.PrintHouseInformation();
+                house.ChangeHouseColor();
+                house.PrintNewHousInformation();
             }
 
             Console.ReadLine();

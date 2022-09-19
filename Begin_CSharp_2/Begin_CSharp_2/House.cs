@@ -20,8 +20,9 @@ namespace Begin_CSharp_2
         public double PropertyWidth { get; set; }
         public double PropertyQM { get; set; }
         public double Wohnfläche { get; set; }
+        public string Color { get; set; }
 
-        public House(double length, double width, int height, string roofType, int etagen, double price, double propertyLength, double propertyWidth, double propertyQM, double wohnfläche)
+        public House(double length, double width, int height, string roofType, int etagen, double price, double propertyLength, double propertyWidth, double propertyQM, double wohnfläche, string color)
         {
             Length = length;
             Width = width;
@@ -33,6 +34,7 @@ namespace Begin_CSharp_2
             PropertyWidth = propertyWidth;
             PropertyQM = propertyQM;
             Wohnfläche = wohnfläche;
+            Color = color;
         }
 
         public House()
@@ -67,6 +69,9 @@ namespace Begin_CSharp_2
             Console.WriteLine("Wie breit ist das Grundstück?");
             qm.PropertyWidth = Convert.ToDouble(Console.ReadLine());
 
+            Console.WriteLine("Welche Farbe soll das Haus haben?");
+            qm.Color = Console.ReadLine();
+
             return qm;
         }
 
@@ -76,10 +81,22 @@ namespace Begin_CSharp_2
             Wohnfläche = PropertyLength * PropertyWidth * Etagen;
         }
 
+        public void ChangeHouseColor()
+        {
+            Console.WriteLine("Welche neue Farbe soll das Haus haben?");
+            Color = Console.ReadLine();
+        }
+
         public void PrintHouseInformation()
         {
-            Console.WriteLine($"Das Haus ist {Length} Meter lang und {Width} Meter breit. Es hat ein {RoofType}dach und {Etagen} Etagen.");
+            Console.WriteLine($"Das Haus ist {Length} Meter lang und {Width} Meter breit. Es hat ein {RoofType}dach und {Etagen} Etagen. Das ist Haus ist {Color}.");
             Console.WriteLine($"Das Grundstück ist {PropertyQM} qm groß, die Wohnfläche beträgt {Wohnfläche} qm.");
+        }
+
+        public void PrintNewHousInformation()
+        {
+            Console.WriteLine($"Die neue Hausfarbe ist {Color}");
+            Console.ReadKey();
         }
     }
 }
