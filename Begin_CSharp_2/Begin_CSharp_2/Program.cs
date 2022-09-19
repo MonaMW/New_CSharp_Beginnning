@@ -27,6 +27,21 @@ namespace Begin_CSharp_2
                 Console.WriteLine($"Mein {g.GetType().Name} hat eine Fläche von {g.Flaeche()} und Umfang von {g.Umfang()}");
             }
 
+            List<Vehicle> fahrzeuge = new List<Vehicle>();
+            fahrzeuge.Add(new Motorcycle(1445, "BMW", "GSXR 2000", "3.0", 3000, "Blau", 2));
+            fahrzeuge.Add(new Car(123, "VW", "Golf V", "2.0 TDI", 1900, "Rot", 4));
+
+            foreach(Vehicle v in fahrzeuge)
+            {
+                v.Starten();
+                v.Beschleunigen();
+                v.Beschleunigen();
+                v.Bremsen();
+                v.Starten();
+                v.Bremsen();
+                v.Bremsen();
+            }
+
             Console.ReadLine();
         }
     }

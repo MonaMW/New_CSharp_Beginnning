@@ -8,24 +8,24 @@ namespace Begin_CSharp_2
 {
     public class Car : Vehicle
     {
-        public Car(int typeId, string make, string model, string typeName, int cCM, string color, int tyres)
-        {
-            TypeId = typeId;
-            Make = make;
-            Model = model;
-            Typename = typeName;
-            CCM = cCM;
-            Tyres = tyres;
-            Color = color;
-        }
-
-        public Car()
+        private Car()
         {
             //leerer Konstruktor für AskUserForCar. Man könnte die Werte auch in Variablen speichern in der Methode AskUserForCar
             //oder am Ende, vor return c; die Parameter(?) übergeben, wie in Program.cs
         }
 
+        public Car(int typeId, string make, string model, string typeName, int cCM, string color, int tyres)
+        {
+            TypeId = typeId;
+            Make = make;
+            Model = model;
+            TypeName = typeName;
+            CCM = cCM;
+            Tyres = tyres;
+            Color = color;
+        }
 
+        
         //Methoden
         //Car ist der Datentyp, der zurückgegeben wird. Könnte auch int oder string sein
         //static wird direkt auf Klasse aufgerufen, nicht auf Objekt
@@ -42,7 +42,7 @@ namespace Begin_CSharp_2
             c.Model = Console.ReadLine();
 
             Console.WriteLine("Welchen Typnamen hat das Auto?");
-            c.Typename = Console.ReadLine();
+            c.TypeName = Console.ReadLine();
 
             Console.WriteLine("Wie viel CCM hat das Auto?");
             c.CCM = Convert.ToInt32(Console.ReadLine());
@@ -59,7 +59,7 @@ namespace Begin_CSharp_2
 
         public void PrintCarInformation()
         {
-            Console.WriteLine($"Mein Fahrzeug ist ein {Make} {Model} {Typename} mit einem Hubraum von {CCM} in der Farbe {Color} mit {Tyres} Reifen.");
+            Console.WriteLine($"Mein Fahrzeug ist ein {Make} {Model} {TypeName} mit einem Hubraum von {CCM} in der Farbe {Color} mit {Tyres} Reifen.");
         }
     }
 }
