@@ -71,6 +71,7 @@ namespace Begin_CSharp_2
                     gewonnen = false;
                 }
                 count++;
+                Console.WriteLine("Random-Zahl: " + random_zahl);
 
             } while (budget > 0 && gewonnen);
 
