@@ -12,7 +12,6 @@ namespace Begin_CSharp_2
         static void Main(string[] args)
         {
             int budget = 10000;
-            //int gesamtverlust = 0;
             Console.WriteLine("Budget ist " + budget);
 
             Console.WriteLine("Setze deinen Einsatz");
@@ -21,12 +20,14 @@ namespace Begin_CSharp_2
             bool gewonnen = true;
             
             Random k = new Random();
-            int random_zahl = k.Next(0, 36);
+            int random_zahl;
 
             int count = 0;
 
             do
             {
+                random_zahl = k.Next(0, 36);
+
                 if (budget >= 10000 && gewonnen)
                 {
                     einsatz += 10;
@@ -71,7 +72,7 @@ namespace Begin_CSharp_2
                 }
                 count++;
 
-            } while (budget > 0);
+            } while (budget > 0 && gewonnen);
 
             Console.WriteLine("Anzahl Spiele: " + count);
             Console.ReadLine();
