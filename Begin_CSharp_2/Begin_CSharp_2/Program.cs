@@ -11,29 +11,27 @@ namespace Begin_CSharp_2
     {
         static void Main(string[] args)
         {
-            Car c1 = new Car();
-            c1.TypeId = 13494;
-            c1.Make = "Audi";
-            c1.Model = "A3";
-            c1.Typename = "2.0 TDI";
-            c1.CCM = 1900;
-            c1.Tyres = 4;
-            c1.Color = "rot";
+            //Car c1 = new Car(13494, "Audi", "A3", "2.0 TDI", 1900, "rot", 4);
+            //Car c2 = new Car(55543, "Volkswagen", "Golf 5", "GTI", 2000, "black", 4);
 
-            //c1.PrintCarInformation();
+            //List<Car> cars = new List<Car>() { c1, c2 };    //Liste ist mit allen Infos gefüllt
 
-            Car c2 = new Car();
-            c2.TypeId = 55543;
-            c2.Make = "Volkswagen";
-            c2.Model = "Golf 5";
-            c2.Typename = "GTI";
-            c2.CCM = 2000;
-            c2.Tyres = 4;
-            c2.Color = "black";
+            Console.WriteLine("Wie viele Autos sollen hinzugefügt werden?");
+            int anzahl = Convert.ToInt32(Console.ReadLine());
 
-            //c2.PrintCarInformation();
+            List<Car> cars = new List<Car>();
+            for(int i = 0; i < anzahl; i++)
+            {
+                cars.Add(Car.AskUserForCar());
+            }
+            
 
-            //Console.WriteLine($"Mein Fahrzeug ist ein {c1.Make} {c1.Model} {c1.Typename} mit einem Hubraum von {c1.CCM} in der Farbe {c1.Color} mit {c1.Tyres} Reifen.");
+            //Alle Fahrzeuge der Liste werden ausgegeben
+            foreach (Car car in cars)
+            {
+                car.PrintCarInformation(); 
+            }
+
             Console.ReadLine();
         }
     }
