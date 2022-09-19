@@ -11,25 +11,22 @@ namespace Begin_CSharp_2
     {
         static void Main(string[] args)
         {
-            //Car c1 = new Car(13494, "Audi", "A3", "2.0 TDI", 1900, "rot", 4);
-            //Car c2 = new Car(55543, "Volkswagen", "Golf 5", "GTI", 2000, "black", 4);
-
-            //List<Car> cars = new List<Car>() { c1, c2 };    //Liste ist mit allen Infos gefüllt
-
-            Console.WriteLine("Wie viele Autos sollen hinzugefügt werden?");
+            Console.WriteLine("Wie viele Häuser sollen hinzugefügt werden?");
             int anzahl = Convert.ToInt32(Console.ReadLine());
 
-            List<Car> cars = new List<Car>();
-            for(int i = 0; i < anzahl; i++)
-            {
-                cars.Add(Car.AskUserForCar());
-            }
+            List<House> houses = new List<House>();
             
-
-            //Alle Fahrzeuge der Liste werden ausgegeben
-            foreach (Car car in cars)
+            
+            for (int i = 0; i < anzahl; i++)
             {
-                car.PrintCarInformation(); 
+                houses.Add(House.Property());
+            }
+
+
+            foreach (House house in houses)
+            {
+                house.CalculateProperties();
+                house.PrintHouseInformation();
             }
 
             Console.ReadLine();
