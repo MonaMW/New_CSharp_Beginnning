@@ -11,35 +11,20 @@ namespace Begin_CSharp_2
     {
         static void Main(string[] args)
         {
-            Dreieck d = new Dreieck(2, 4, 10);
+            List<Tiere> animals = new List<Tiere>();
+            animals.Add(new Elefant("Benjamin", "Elefant", 10, 5, 30, 2000, false, "Trööt"));
+            animals.Add(new Giraffe("Gigi", "Giraffe", 5, 10, 15, 500, true, "Schmatz"));
+            animals.Add(new Tiger("Tina", "Tiger", 2, 1, 30, 300, true, "Roar"));
+            animals.Add(new Pinguin("Pino", "Pinguin", 3, 0.5, 25, 20, true, "Quietschen"));
 
-            Kreis c = new Kreis(5);
-
-            Rechteck r = new Rechteck(10, 20);
- 
-            List<IGeometry> geometries = new List<IGeometry>();
-            geometries.Add(d);
-            geometries.Add(c);
-            geometries.Add(r);
-
-            foreach(IGeometry g in geometries)
+            foreach (Tiere t in animals)
             {
-                Console.WriteLine($"Mein {g.GetType().Name} hat eine Fläche von {g.Flaeche()} und Umfang von {g.Umfang()}");
-            }
-
-            List<Vehicle> fahrzeuge = new List<Vehicle>();
-            fahrzeuge.Add(new Motorcycle(1445, "BMW", "GSXR 2000", "3.0", 3000, "Blau", 2));
-            fahrzeuge.Add(new Car(123, "VW", "Golf V", "2.0 TDI", 1900, "Rot", 4));
-
-            foreach(Vehicle v in fahrzeuge)
-            {
-                v.Starten();
-                v.Beschleunigen();
-                v.Beschleunigen();
-                v.Bremsen();
-                v.Starten();
-                v.Bremsen();
-                v.Bremsen();
+                t.Geraeusche();
+                t.Essen();
+                t.Geraeusche();
+                t.Trinken();
+                t.Geraeusche();
+                t.PrintInfo();
             }
 
             Console.ReadLine();

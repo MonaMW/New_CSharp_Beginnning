@@ -44,14 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Car.cs" />
-    <Compile Include="Dreieck.cs" />
-    <Compile Include="Geometry.cs" />
+    <Compile Include="Elefant.cs" />
+    <Compile Include="Pinguin.cs" />
+    <Compile Include="Tiger.cs" />
+    <Compile Include="Giraffe.cs" />
     <Compile Include="House.cs" />
-    <Compile Include="Kreis.cs" />
     <Compile Include="Motorcycle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rechteck.cs" />
+    <Compile Include="Tiere.cs" />
     <Compile Include="Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
