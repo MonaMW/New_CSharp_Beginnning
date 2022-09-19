@@ -6,19 +6,9 @@ using System.Threading.Tasks;
 
 namespace Begin_CSharp_2
 {
-    public class Car
+    public class Car : Vehicle
     {
-        //Properties
-        public int TypeId { get; set; }
-        public string Make { get; set; }
-        public string Model { get; set; }
-        public string Typename { get; set; }
-        public int CCM { get; set; }
-        public string Color { get; set; }
-        public int Tyres { get; set; }
-
-        //Konstruktoren
-        public Car(int typeId, string make, string model, string typeName, int cCM, string color, int tyres)    //Car erstellen und zurückgeben
+        public Car(int typeId, string make, string model, string typeName, int cCM, string color, int tyres)
         {
             TypeId = typeId;
             Make = make;

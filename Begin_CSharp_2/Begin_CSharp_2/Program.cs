@@ -11,24 +11,20 @@ namespace Begin_CSharp_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Wie viele Häuser sollen hinzugefügt werden?");
-            int anzahl = Convert.ToInt32(Console.ReadLine());
+            Dreieck d = new Dreieck(2, 4, 10);
 
-            List<House> houses = new List<House>();
-            
-            
-            for (int i = 0; i < anzahl; i++)
+            Kreis c = new Kreis(5);
+
+            Rechteck r = new Rechteck(10, 20);
+ 
+            List<IGeometry> geometries = new List<IGeometry>();
+            geometries.Add(d);
+            geometries.Add(c);
+            geometries.Add(r);
+
+            foreach(IGeometry g in geometries)
             {
-                houses.Add(House.Property());
-            }
-
-
-            foreach (House house in houses)
-            {
-                house.CalculateProperties();
-                house.PrintHouseInformation();
-                house.ChangeHouseColor();
-                house.PrintNewHousInformation();
+                Console.WriteLine($"Mein {g.GetType().Name} hat eine Fläche von {g.Flaeche()} und Umfang von {g.Umfang()}");
             }
 
             Console.ReadLine();
