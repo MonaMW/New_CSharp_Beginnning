@@ -32,9 +32,14 @@ namespace Begin_CSharp_2
             Console.WriteLine($"{this.Name} macht {Noise}.");
         }
 
+        //public override string ToString()
+        //{
+        //    return $"{this.Name} ist {this.Age} Jahre alt und {this.Height} groß. Die Lebensspanne beträgt {this.Liefspan} Jahre, das Gewicht beträgt {this.Weight} kg. {this.Name} ist ein {this.Species}.";
+        //}
+        //public override string ToString() statt folgendes
         public void PrintInfo()
         {
-            Console.WriteLine($"{this.Name} ist {this.Age} Jahre alt und {this.Height} groß. Die Lebensspanne beträgt {this.Liefspan} Jahre, das Gewicht {this.Weight} kg. {this.Name} ist ein {this.Species}.");
+            Console.WriteLine($"{this.Name} ist {this.Age} Jahre alt und {this.Height} groß. Die Lebensspanne beträgt {this.Liefspan} Jahre, das Gewicht beträgt {this.Weight} kg. {this.Name} ist ein {this.Species}.");
             Console.WriteLine("");
         }
     }

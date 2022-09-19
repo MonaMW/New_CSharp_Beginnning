@@ -11,6 +11,8 @@ namespace Begin_CSharp_2
     {
         static void Main(string[] args)
         {
+            //Interface wird nur zum Vererben von Methoden verwendet
+
             List<Tiere> animals = new List<Tiere>();
             animals.Add(new Elefant("Benjamin", "Elefant", 10, 5, 30, 2000, false, "Trööt"));
             animals.Add(new Giraffe("Gigi", "Giraffe", 5, 10, 15, 500, true, "Schmatz"));
