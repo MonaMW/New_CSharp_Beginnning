@@ -11,23 +11,27 @@ namespace Begin_CSharp_2
     {
         static void Main(string[] args)
         {
-            //Interface wird nur zum Vererben von Methoden verwendet
+            Console.WriteLine("Wie viele Einträge soll das Array haben?");
+            int count = Convert.ToInt32(Console.ReadLine());
+            float[] ints = new float[count];
+            float for_loop = 0;
+            float foreach_loop = 0;
 
-            List<Tiere> animals = new List<Tiere>();
-            animals.Add(new Elefant("Benjamin", "Elefant", 10, 5, 30, 2000, false, "Trööt"));
-            animals.Add(new Giraffe("Gigi", "Giraffe", 5, 10, 15, 500, true, "Schmatz"));
-            animals.Add(new Tiger("Tina", "Tiger", 2, 1, 30, 300, true, "Roar"));
-            animals.Add(new Pinguin("Pino", "Pinguin", 3, 0.5, 25, 20, true, "Quietschen"));
-
-            foreach (Tiere t in animals)
+            for(int i = 0; i < ints.Length; i++)
             {
-                t.Geraeusche();
-                t.Essen();
-                t.Geraeusche();
-                t.Trinken();
-                t.Geraeusche();
-                t.PrintInfo();
+                ints[i] = Convert.ToInt32(Console.ReadLine());
             }
+
+            for(int i = 0; i < ints.Length; i++)
+            {
+                for_loop += ints[i];
+            }
+
+            foreach(int i in ints) 
+            {
+                foreach_loop += ints[i];
+            }
+
 
             Console.ReadLine();
         }
